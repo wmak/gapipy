@@ -1,6 +1,7 @@
 from .tour import (  # NOQA
     Accommodation,
     Activity,
+    BestPrice,
     OptionalActivity,
     Departure,
     DepartureComponent,
@@ -76,6 +77,7 @@ available_public_resources = [
     # Tour
     'Accommodation',
     'Activity',
+    'BestPrice',
     'Departure',
     'DepartureComponent',
     'Image',

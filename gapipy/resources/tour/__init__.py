@@ -1,6 +1,7 @@
 # flake8: NOQA
 from .accommodation import Accommodation
 from .activity import Activity
+from .best_price import BestPrice
 from .departure import Departure
 from .departure_component import DepartureComponent
 from .image import Image
