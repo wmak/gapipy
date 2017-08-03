@@ -8,26 +8,24 @@ class DepartureModel(BaseModel):
     _as_is_fields = ['id', 'href', ]
 
 
+class AvailabilityModel(BaseModel):
+    _as_is_fields = ['status', 'total', 'male', 'female', ]
+
+
+
 class PriceModel(BaseModel):
     _as_is_fields = ['currency', 'price', 'original_price']
 
     _model_fields = [
         ('departure', DepartureModel),
         ('promotion', PromotionModel),
+        ('availability', AvailabilityModel),
     ]
-
-
-
-class AvailabilityModel(BaseModel):
-    _as_is_fields = ['status', 'total', 'male', 'female', ]
 
 
 class BestPriceRoom(BaseModel):
     _as_is_fields = ['code', 'name']
 
-    _model_fields = [
-        ('availability', AvailabilityModel),
-    ]
     _model_collection_fields = [
         ('prices', PriceModel),
     ]
